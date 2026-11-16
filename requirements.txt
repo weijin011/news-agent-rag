@@ -1,0 +1,25 @@
+# 新闻资讯系统 —— 依赖清单
+# 安装命令（在项目虚拟环境中执行）：
+#   pip install -r requirements.txt
+
+# ---------- 原项目已有依赖 ----------
+fastapi>=0.115
+uvicorn>=0.30
+SQLAlchemy[asyncio]>=2.0  # 必须带 asyncio extra：否则缺 greenlet，异步会话导入即报错
+aiomysql>=0.2.0          # MySQL 异步驱动
+PyMySQL>=1.1             # aiomysql 的底层依赖
+redis>=5.0               # 缓存
+passlib>=1.7.4           # 密码哈希
+bcrypt>=3.2              # passlib 的 bcrypt 后端
+pydantic>=2.0
+
+# ---------- 数据导入导出功能新增依赖 ----------
+# 必需：FastAPI 处理文件上传（UploadFile / File）依赖它。
+#      缺少它时应用仍可启动，但「从文件导入」接口返回 503 提示。
+python-multipart>=0.0.9
+
+# ---------- AI / RAG 新增依赖 ----------
+pydantic-settings>=2.2       # 从 .env 读取配置，替代硬编码
+openai>=1.40                 # OpenAI 兼容协议客户端（生成 + embedding 共用）
+chromadb>=0.5                # 本地持久化向量库
+httpx>=0.27                  # FastAPI TestClient 依赖（scripts/selftest_rag.py 用）

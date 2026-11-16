@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "source": "data_files/news_seed.json",
+  "note": "news_id 是 seed 文件内序号（--source file 建库时的编号）。重复新闻的两个 id 都算正确。问题刻意改写成口语，不照抄标题，避免评测偏乐观。",
+  "cases": [
+    {"id": 1, "type": "relevant", "question": "AI 自己设计芯片这件事最近有什么进展？", "expected_news_ids": [1]},
+    {"id": 2, "type": "relevant", "question": "英伟达认购联发科可转债是怎么回事？", "expected_news_ids": [2, 46]},
+    {"id": 3, "type": "relevant", "question": "国产 AI 芯片厂商今年开始赚钱了吗？", "expected_news_ids": [3]},
+    {"id": 4, "type": "relevant", "question": "三星打算怎么解决 AI 时代的内存瓶颈？", "expected_news_ids": [4]},
+    {"id": 5, "type": "relevant", "question": "中昊芯英新发布的 TPU 芯片叫什么名字？", "expected_news_ids": [5]},
+    {"id": 6, "type": "relevant", "question": "赵心童在英国公开赛首秀打得怎么样？", "expected_news_ids": [6]},
+    {"id": 7, "type": "relevant", "question": "谷歌把芯片更新周期改成了什么节奏？", "expected_news_ids": [51]},
+    {"id": 8, "type": "relevant", "question": "Cognition 这轮融资大概拿了多少钱？", "expected_news_ids": [57]},
+    {"id": 9, "type": "relevant", "question": "英伟达市值一夜之间涨到多少了？", "expected_news_ids": [64]},
+    {"id": 10, "type": "relevant", "question": "日本 9 月大概有多少种食品要涨价？", "expected_news_ids": [121]},
+    {"id": 11, "type": "relevant", "question": "日本 5 年期国债收益率现在到什么水平了？", "expected_news_ids": [14]},
+    {"id": 12, "type": "relevant", "question": "今年中网公布了哪些参赛球星？", "expected_news_ids": [73]},
+    {"id": 13, "type": "relevant", "question": "刘禹彤进亚运会的名单了吗？", "expected_news_ids": [67]},
+    {"id": 14, "type": "relevant", "question": "市场对美联储 9 月加息的预期概率是多少？", "expected_news_ids": [12]},
+    {"id": 15, "type": "relevant", "question": "Labubu 隐藏款在二手市场被炒到多少钱？", "expected_news_ids": [29, 175]},
+    {"id": 16, "type": "out_of_scope", "question": "请写一段 Python 冒泡排序代码", "expected_news_ids": []},
+    {"id": 17, "type": "out_of_scope", "question": "明天福州的天气怎么样？", "expected_news_ids": []},
+    {"id": 18, "type": "out_of_scope", "question": "怎么配置 MySQL 的主从复制？", "expected_news_ids": []},
+    {"id": 19, "type": "out_of_scope", "question": "帮我算一下 123 乘以 456 等于多少", "expected_news_ids": []},
+    {"id": 20, "type": "out_of_scope", "question": "推荐几本适合大学生读的小说", "expected_news_ids": []}
+  ]
+}

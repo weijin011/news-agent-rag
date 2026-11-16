@@ -1,0 +1,30 @@
+{
+  "type": "database_backup",
+  "tables": {
+    "news": {
+      "rows": [
+        {
+          "id": 1,
+          "title": "中文标题,含逗号",
+          "description": null,
+          "content": "正文\n含换行",
+          "image": null,
+          "author": "张三",
+          "category_id": 1,
+          "views": 10,
+          "publish_time": "2024-05-01 08:00:00",
+          "created_at": "2024-05-01 08:00:00",
+          "updated_at": "2024-05-01 08:00:00"
+        }
+      ]
+    },
+    "news_category": {
+      "rows": [
+        {
+          "id": 1,
+          "name": "要闻"
+        }
+      ]
+    }
+  }
+}

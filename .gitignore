@@ -1,0 +1,32 @@
+# 密钥与本地配置
+.env
+.env.local
+*.env.local
+
+# 向量索引（由 scripts/build_index.py 生成，可随时重建）
+.chroma/
+chroma.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# 前端
+项目前端代码/xwzx-news/node_modules/
+项目前端代码/xwzx-news/dist/
+
+# 日志
+*.log
+
+# 课程设计文档与临时表格（非代码产物）
+*.docx
+*.doc
+*.xls
+*.xlsx
+
+# 运行时数据（会话记录、本地缓存，含用户对话内容，绝不入库）
+data_files/chat_sessions.json
