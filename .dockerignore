@@ -1,0 +1,12 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.chroma/
+*.log
+.env
+项目前端代码/xwzx-news/node_modules/
+项目前端代码/xwzx-news/dist/
+data_files/_selftest/
+*.docx
+*.xls

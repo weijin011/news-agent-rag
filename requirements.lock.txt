@@ -1,0 +1,20 @@
+# 版本锁文件：由当前可运行的 .venv 实测导出
+# 用途：docker build 用它，保证换机器不会因依赖升级而崩
+# 生成时间：2026-11-16
+# 注意：requirements.txt 是宽松声明（>=），本文件是实测固定版本，两者分开维护
+
+aiomysql==0.3.2
+bcrypt==5.0.0
+chromadb==1.5.9
+fastapi==0.162.4
+greenlet==3.5.6
+httpx==0.28.1
+openai==3.49.0
+passlib==1.7.4
+pydantic==2.14.3
+pydantic-settings==2.16.2
+PyMySQL==1.2.4
+python-multipart==0.0.33
+redis==8.1.0
+SQLAlchemy==2.1.8
+uvicorn==0.54.0
