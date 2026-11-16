@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 chcp 65001 >nul
 cd /d "%~dp0"
 
@@ -6,30 +6,26 @@ echo ============================================
 echo   推送 news-agent-rag 到 GitHub
 echo ============================================
 echo.
-echo 目标仓库: https://github.com/weijin011/news-agent-rag.git
+echo 目标: https://github.com/weijin011/news-agent-rag
+echo 分支: main
 echo.
-echo 第一次运行会弹出 GitHub 登录窗口：
-echo   用户名: weijin011
-echo   密码: 不是GitHub登录密码，要用 Personal Access Token
-echo   （GitHub - Settings - Developer settings - Personal access tokens - Tokens(classic)
-echo     勾选 repo 权限，生成后复制粘贴过来）
+echo 第一次会弹出 GitHub 登录窗口，用浏览器 OAuth 登录即可，
+echo 不需要手动生成 Token。登录成功后会自动记住，以后双击直接推。
 echo.
 
 pause
 
 git push -u origin main
+
+echo.
 if errorlevel 1 (
-    echo.
-    echo [失败] 推送未成功。常见原因：
-    echo   1. 网络访问不了 github.com（国内常见，需要代理）
-    echo   2. 仓库还没在 GitHub 上创建
-    echo   3. Token 没有 repo 权限
-    echo.
-    echo 如果远程仓库还不存在，先去 https://github.com/new 创建
-    echo 仓库名填 news-agent-rag，不要勾选 README/LICENSE（本地已有）
+    echo [失败] 可能原因：
+    echo   1. 网络连不上 github.com
+    echo   2. GitHub 上仓库还没建（去 https://github.com/new 建 news-agent-rag，
+    echo      不要勾 README / LICENSE / .gitignore）
+    echo   3. 登录窗口被挡住，或账号没仓库权限
 ) else (
-    echo.
-    echo [成功] 已推送！打开 https://github.com/weijin011/news-agent-rag 查看
+    echo [成功] 打开 https://github.com/weijin011/news-agent-rag 查看
 )
 
 echo.
